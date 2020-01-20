@@ -4,6 +4,7 @@ import re
 import uuid
 import logging
 from datetime import datetime
+from PIL import Image
 # C:/ProgramData/Anaconda3/python.exe c:/Users/rafat/OneDrive/Desktop/server/server.py
 
 def serverModule(net_type='', port=0, buffer=1024):
@@ -86,10 +87,9 @@ class MyServer:
                         if not data:
                             self.LOGGER.info("*** Close Connection ***")
                             self.LOGGER.info(addr)
-
                             break
 
-                        self.LOGGER.info(str(data.decode("utf-8")))
+                        self.LOGGER.info(data)
                         conn.sendall("*** done data ***".encode('utf-8'))
 
         pass
