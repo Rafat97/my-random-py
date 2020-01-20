@@ -1,0 +1,77 @@
+{
+    "q" : {
+        "send_code" : "q",
+        "description" : " Go Forward "
+    },
+    "w" : {
+        "send_code" : "w",
+        "description" : " Go Backward "
+    },
+    "e" : {
+        "send_code" : "e",
+        "description" : " Go Forward "
+    },
+    "r" : {
+        "send_code" : "r",
+        "description" : " Turn Left "
+    },
+    "k" : {
+        "send_code" : "k",
+        "description" : " Go Forward "
+    },
+    "t" : {
+        "send_code" : "t",
+        "description" : " Jaw Open "
+    },
+    "y" : {
+        "send_code" : "y",
+        "description" : " Jaw Close "
+    },
+    "u" : {
+        "send_code" : "u",
+        "description" : " Jaw Base Move Left/Anticlockwise "
+    },
+    "i" : {
+        "send_code" : "i",
+        "description" : " Jaw Base Move Right/Clockwise "
+    },
+    "o" : {
+        "send_code" : "o",
+        "description" : " Arm Base Move Left/Anticlockwise "
+    },
+    "p" : {
+        "send_code" : "p",
+        "description" : " Arm Base Move Right/Clockwise "
+    },
+    "a" : {
+        "send_code" : "a",
+        "description" : " Actuator 1 Go Up "
+    },
+    "s" : {
+        "send_code" : "s",
+        "description" : " Actuator 1 Go Down "
+    },
+    "d" : {
+        "send_code" : "d",
+        "description" : " Actuator 2 Go Up "
+    },
+    "f" : {
+        "send_code" : "f",
+        "description" : " Actuator 2 Go Down "
+    },
+    "g" : {
+        "send_code" : "g",
+        "description" : " Actuator 3 Go Up "
+    },
+    "h" : {
+        "send_code" : "h",
+        "description" : "  Actuator 3 Go Down "
+    },
+    "j" : {
+        "send_code" : "j",
+        "description" : "  Speed "
+    }
+    
+    
+
+}
