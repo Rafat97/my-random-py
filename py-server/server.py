@@ -5,10 +5,11 @@ import uuid
 import logging
 from datetime import datetime
 from PIL import Image
+import pyfiglet 
 # C:/ProgramData/Anaconda3/python.exe c:/Users/rafat/OneDrive/Desktop/server/server.py
 
-def serverModule(net_type='', port=0, buffer=1024):
-    blu = MyServer(net_type, port, buffer)
+def serverModule(server_name="No Name Server" ,net_type='', port=0, buffer=1024):
+    blu = MyServer(server_name,net_type, port, buffer)
     blu.creatServer()
 
 class MyServer:
@@ -18,12 +19,14 @@ class MyServer:
     PORT = 2564
     MAC = ':'.join(re.findall('..', '%012x' % uuid.getnode()))
     SOCKET = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    SERVER_NAME = "No Name Server"
     ETHERNET_HOST = ""
     BUFFER_SIZE = 1024
     LOGGER = None
 
-    def __init__(self, net_type='', port=0, buffer=1024):
+    def __init__(self,server_name="No Name Server", net_type='', port=0, buffer=1024):
         self.BUFFER_SIZE = buffer
+        self.SERVER_NAME = server_name
         self.PC_NAME = socket.gethostname()
         self.HOST = socket.gethostbyname(self.PC_NAME)
         addresses = os.popen(
@@ -63,10 +66,13 @@ class MyServer:
         
 
     def creatServer(self):
+        result = pyfiglet.figlet_format(self.SERVER_NAME) 
+        print(result)
         print("PC Name : ", self.PC_NAME)
         print("host : ", self.HOST)
         print("port : ", self.PORT)
         print("buffer size : ", self.BUFFER_SIZE)
+        self.LOGGER.info(result)
         self.LOGGER.info(self.PC_NAME)
         self.LOGGER.info(self.HOST)
         self.LOGGER.info(self.PORT)
@@ -96,5 +102,5 @@ class MyServer:
 
 
 if __name__ == "__main__":
-    blu = MyServer('e', 28280)
+    blu = MyServer(net_type='e', port=28280, buffer=5000000)
     blu.creatServer()
