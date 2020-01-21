@@ -51,7 +51,7 @@ class MyServer:
             soc.bind((self.HOST, self.PORT))
         pass
 
-        fileName = "_SERVER_LOG_"+str(now.strftime("%d-%m-%Y__%H-%M-%S")) + ".log"
+        fileName = os.path.dirname(os.path.realpath(__file__))+"/_SERVER_LOG_"+str(now.strftime("%d-%m-%Y__%H-%M-%S")) + ".log"
 
         logging.basicConfig(filename= fileName, 
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', 
